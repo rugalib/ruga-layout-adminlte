@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ruga-asset-skeleton.iml" filepath="$PROJECT_DIR$/.idea/ruga-asset-skeleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ruga-layout-adminlte.iml" filepath="$PROJECT_DIR$/.idea/ruga-layout-adminlte.iml" />
     </modules>
   </component>
 </project>

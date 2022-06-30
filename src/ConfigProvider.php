@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ruga\Asset\Skeleton;
+namespace Ruga\Layout\AdminLTE;
 
 /**
  * ConfigProvider.
@@ -16,7 +16,7 @@ class ConfigProvider
         return [
             'ruga' => [
                 'asset' => [
-                    'rugalib/ruga-asset-alertify' => [
+                    'rugalib/ruga-asset-adminlte' => [
                         'scripts' => [],
                         'stylesheets' => [],
                     ],

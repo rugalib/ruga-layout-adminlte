@@ -1,6 +1,6 @@
 {
-  "name": "rugalib/ruga-asset-skeleton",
-  "description": "Template for rugalib assets",
+  "name": "rugalib/ruga-layout-adminlte",
+  "description": "AdminLTE 3 Layout",
   "homepage": "https://github.com/rugalib",
   "type": "library",
   "require": {
@@ -20,13 +20,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "Ruga\\Asset\\Skeleton\\": "src/"
+      "Ruga\\Layout\\AdminLTE\\": "src/"
     }
   },
   "extra": {
     "laminas": {
-      "component": "Ruga\\Asset\\Skeleton",
-      "config-provider": "Ruga\\Asset\\Skeleton\\ConfigProvider"
+      "component": "Ruga\\Layout\\AdminLTE",
+      "config-provider": "Ruga\\Layout\\AdminLTE\\ConfigProvider"
     }
   }
 }
