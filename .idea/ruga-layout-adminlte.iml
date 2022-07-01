@@ -6,8 +6,35 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Ruga\Layout\AdminLTE\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/src" isTestSource="true" packagePrefix="Ruga\Layout\AdminLTE\Test\" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-json" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-servicemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-view" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-daterangepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-chartjs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-icheck-bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-fontawesome-free" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jquery-knob" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jqvmap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jqueryui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-overlayscrollbars" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-momentjs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-summernote" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-popperjs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/ruga-asset" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-tempusdominus-bs4" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/ruga-std" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/ruga-log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
