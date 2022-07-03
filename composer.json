@@ -19,7 +19,10 @@
     "rugalib/asset-summernote": "^0.8",
     "rugalib/asset-chartjs": "^2.9",
     "rugalib/asset-jquery-knob": "^1.2",
-    "rugalib/asset-popperjs": "^1.16"
+    "rugalib/asset-popperjs": "^1.16",
+    "rugalib/asset-select2": "^4.0",
+    "rugalib/asset-jquery-validation": "^1.19",
+    "rugalib/asset-jquery-datatables": "^1.12"
   },
   "repositories": [
     {
