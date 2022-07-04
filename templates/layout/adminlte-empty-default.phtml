@@ -1,0 +1,38 @@
+<?php
+/** @var Laminas\View\Renderer\PhpRenderer $this */
+
+$this->headLink()->prependStylesheet('app.css');
+$this->inlineScript()->prependFile('app.js');
+
+// Google Font: Source Sans Pro
+$this->headLink()->prependStylesheet('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback');
+// Ionicons
+$this->headLink()->prependStylesheet('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+// Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+$this->inlineScript()->prependScript("$.widget.bridge('uibutton', $.ui.button)");
+
+
+//$this->inlineScript()->prependScript("$.fn.select2.defaults.set('theme', 'bootstrap4')");
+//$this->headLink()->prependStylesheet('adminlte3/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css');
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="<?= $this->basePath(); ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <?= $this->headTitle('AdminLTE')->setSeparator(' - ')->setAutoEscape(false) ?>
+    <?= $this->headMeta() ?>
+    <? $this->headLinkAssets()?>
+    <?= $this->headLink() ?>
+    <?= $this->headScript() ?>
+</head>
+<body class="hold-transition login-page">
+<?= $this->content ?>
+<?= $this->inlineScript() ?>
+</body>
+</html>

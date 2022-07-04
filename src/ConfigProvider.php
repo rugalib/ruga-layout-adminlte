@@ -17,9 +17,14 @@ class ConfigProvider
             'templates' => [
                 'layout' => 'layout::adminlte-default',
                 'paths' => [
-                    'layout' => [__DIR__ . "/../templates/layout"]
-//            This is defined in the module src/**/src/ConfigProvider.php
-//            'part' => [__DIR__ . '/../../src/Notused/template/part']
+                    'layout' => [__DIR__ . "/../templates/layout"],
+                    'error' => [__DIR__ . "/../templates/error"],
+                ],
+            ],
+            'mezzio' => [
+                'error_handler' => [
+                    'template_404'   => 'error::adminlte-404-default',
+                    'template_error' => 'error::adminlte-500-default',
                 ],
             ],
             'ruga' => [

@@ -1,22 +1,30 @@
+<?php
+/** @var Laminas\View\Renderer\PhpRenderer $this */
+
+$this->headLink()->prependStylesheet('app.css');
+$this->inlineScript()->prependFile('app.js');
+// Google Font: Source Sans Pro
+$this->headLink()->prependStylesheet('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback');
+// Ionicons
+$this->headLink()->prependStylesheet('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+// Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+$this->inlineScript()->prependScript("$.widget.bridge('uibutton', $.ui.button)");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="<?= $this->basePath(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <?= $this->headTitle('AdminLTE')->setSeparator(' - ')->setAutoEscape(false) ?>
     <?= $this->headMeta() ?>
-    <?
-    $this->headLinkAssets() ?>
+    <? $this->headLinkAssets() ?>
     <?= $this->headLink() ?>
     <?= $this->headScript() ?>
 
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -870,12 +878,7 @@
 </div>
 <!-- ./wrapper -->
 
-
 <?= $this->inlineScript() ?>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script type="text/javascript">
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
 
 <script type="text/javascript">
 
@@ -883,16 +886,21 @@
     (function ($, window, document) {
         function openParentMenu(item)
         {
+            // debugger;
+            const parentLi = item.closest("li.nav-item");
+            const thisA = $(parentLi[0].children.item('a'));
+            thisA.addClass('active');
+            
             const parentUl = item.closest('ul.nav-treeview');
             if(parentUl.length === 0) return;
-            const parentLi = parentUl.closest("li.nav-item");
-            if(parentLi.length === 0) return;
-            const thisA = $(parentLi[0].children.item('a'));
+            const parentUlLi = parentUl.closest("li.nav-item");
+            if(parentUlLi.length === 0) return;
+            // const thisA = $(parentLi[0].children.item('a'));
             // console.log('parentLi=', parentLi, 'thisA', thisA);
-            if (parentLi.length !== 0) {
-                openParentMenu(parentLi);
-                item.addClass('active');
-                parentLi.addClass('menu-open');
+            if (parentUlLi.length !== 0) {
+                openParentMenu(parentUlLi);
+                // item.addClass('active');
+                parentUlLi.addClass('menu-open');
             }
         }
         
