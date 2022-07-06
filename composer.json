@@ -5,6 +5,8 @@
   "type": "library",
   "require": {
     "php": "^7.4",
+    "psr/container": "^1.0",
+    "rugalib/ruga-std": "^1.0",
     "rugalib/ruga-asset": "^1.4",
     "rugalib/asset-jquery": "^3.5",
     "rugalib/asset-jqueryui": "^1.11",

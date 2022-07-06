@@ -1,0 +1,87 @@
+<?php
+/** @var \Laminas\View\Renderer\PhpRenderer $this */
+
+$copyrightYear=function(int $startYear) {
+    $actualYear=date('Y');
+    return $startYear . ($actualYear > $startYear ? " - {$actualYear}" : "");
+};
+
+$appName = \Composer\InstalledVersions::getRootPackage()['name'];
+$appRelease = \Composer\InstalledVersions::getPrettyVersion($appName);
+?>
+<footer class="main-footer">
+    <strong>Copyright &copy; <?=$copyrightYear(2022)?> &nbsp;<a href="https://easy-smart.ch">easy-smart solution GmbH</a>.</strong> All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Release</b> v<?= $appRelease ?><br/>
+    </div>
+
+    <div class="float-right d-sm-inline-block mr-5">
+        <button type="button" name="btn_feedback" class="btn btn-default btn-xs" disabled="disabled"><i class="fas fa-bullhorn"></i>
+            Feedback
+        </button>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    <? $this->inlineScript()->captureStart() ?>
+
+    (function ($, window, document) {
+        // The $ is now locally scoped
+
+        $(function () {
+            // The DOM is ready!
+
+            $('button[name=btn_feedback]').on('click', function (e) {
+
+                var dialog = $("<div></div>", document)
+                    // .data('printscreen', imageData)
+                    .load('<?=$this->basePath('feedback')?>/new/editdialog')
+                    .dialog({
+                        title: 'Feedback erstellen...',
+                        modal: true,
+                        maxHeight: 720,
+                        height: (window.innerHeight * 0.9) < 720 ? (window.innerHeight * 0.9) : 720,
+                        maxWidth: 880,
+                        width: (window.innerWidth * 0.9) < 880 ? (window.innerWidth * 0.9) : 880,
+                        position: { my: "center", at: "center", of: window },
+                        show: {effect: "blind", duration: 80},
+                        autoopen: true,
+                        close: function (event, ui) {
+                            $(this).dialog('destroy').remove();
+                        },
+                        buttons: [
+                            {
+                                text: "Ok",
+                                icons: {primary: "far fa-check-circle"},
+                                // create: function (event, ui) {
+                                //     $(this).prepend('<i class="app-icon app-icon-accept"></i> ');
+                                // },
+                                click: function (event, ui) {
+                                    var dialog = $(this);
+                                    var form = $('form', this);
+                                    form.rrlibform().submit().then(function (data) {
+                                        $(dialog).dialog('close');
+                                    });
+                                }
+                            },
+                            {
+                                text: "Abbrechen",
+                                icons: {primary: "fas fa-minus-circle"},
+                                create: function (event, ui) {
+                                    $(this).prepend('<i class="app-icon app-icon-cancel"></i> ');
+                                },
+                                click: function () {
+                                    $(this).dialog('close');
+                                }
+                            }
+                        ]
+                    });
+                
+            });
+
+
+        });
+    }(window.jQuery, window, document));
+    <? $this->inlineScript()->captureEnd() ?>
+</script>
+
