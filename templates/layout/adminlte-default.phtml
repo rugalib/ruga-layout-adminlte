@@ -136,7 +136,7 @@ $this->headLink()->prependStylesheet('https://code.ionicframework.com/ionicons/2
             if((pagename === '') || (pagename === '/')) pagename='index.html';
             const link = $('[data-widget="treeview"] .nav-link[href="' + pagename + '"]');
             // console.log('pagename=', pagename, 'link=', link);
-            openParentMenu(link);
+            if(link.length > 0) openParentMenu(link);
         });
     }(window.jQuery, window, document));
 </script>
