@@ -34,7 +34,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-tempusdominus-bs4" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/ruga-std" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/ruga-log" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jquery-validation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-select2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rugalib/asset-jquery-datatables" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
