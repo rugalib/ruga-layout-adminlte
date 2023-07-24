@@ -10,7 +10,7 @@
     "rugalib/ruga-asset": "^1.4",
     "rugalib/asset-jquery": "^3.5",
     "rugalib/asset-jqueryui": "^1.11",
-    "rugalib/asset-bootstrap": "^4.6",
+    "rugalib/asset-bootstrap": "^5.1",
     "rugalib/asset-fontawesome-free": "^6.1",
     "rugalib/asset-momentjs": "^2.29",
     "rugalib/asset-tempusdominus-bs4": "^5.39",
