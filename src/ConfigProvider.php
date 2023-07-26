@@ -27,6 +27,7 @@ class ConfigProvider
             ],
             'mezzio' => [
                 'error_handler' => [
+                    'layout' => 'layout::adminlte-default',
                     'template_404' => 'error::adminlte-404-default',
                     'template_error' => 'error::adminlte-500-default',
                 ],
