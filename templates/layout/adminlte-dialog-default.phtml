@@ -1,2 +1,23 @@
-<?=$this->content?>
-<?=$this->inlineScript()?>
+<?= $this->content ?>
+
+<script type="text/javascript">
+    <? $this->inlineScript()->captureStart() ?>
+    (function ($, window, document) {
+        // The $ is now locally scoped
+
+        $(function () {
+            // The DOM is ready!
+            const dialog=$('div.ui-dialog');
+
+            // Hide content-header in dialog
+            $('div.content-header', dialog).hide();
+
+            // Update Dialog title
+            $('span.ui-dialog-title', dialog).text($('div.content-header h1', dialog).text());
+
+        });
+    }(window.jQuery, window, document));
+    <? $this->inlineScript()->captureEnd() ?>
+</script>
+<?= $this->inlineScript() ?>
+
