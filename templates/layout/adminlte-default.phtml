@@ -106,6 +106,26 @@ $this->headLink()->prependStylesheet('https://code.ionicframework.com/ionicons/2
 
 <script type="text/javascript">
 
+    function handleTabUrl() {
+        // Open tab from url hash
+        let url = document.location.toString();
+        if (url.match('#')) {
+            $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+        }
+
+        // Change hash in url when tab changes
+        $('.nav-tabs a').on('shown.bs.tab', function (event) {
+            if (history.pushState) {
+                let loc = window.location;
+                loc.hash = event.target.hash
+                history.pushState(null, null, loc.href);
+            } else {
+                window.location.hash = event.target.hash; // Polyfill for old browsers
+            }
+        })
+    }
+
+
     // Set link in sidebar active, if page is loaded
     (function ($, window, document) {
         function openParentMenu(item)
@@ -131,6 +151,8 @@ $this->headLink()->prependStylesheet('https://code.ionicframework.com/ionicons/2
         $(function () {
             //const server = <?//=json_encode($_SERVER)?>//;
             // console.log(server);
+
+            handleTabUrl();
             
             let pagename = '<?=str_replace($_SERVER['REDIRECT_BASE']??dirname($_SERVER['SCRIPT_NAME']), '', $_SERVER['REQUEST_URI'])?>';
             if((pagename === '') || (pagename === '/')) pagename='index.html';
