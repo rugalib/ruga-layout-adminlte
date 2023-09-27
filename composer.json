@@ -2,6 +2,7 @@
   "name": "rugalib/ruga-layout-adminlte",
   "description": "AdminLTE 3 Layout",
   "homepage": "https://github.com/rugalib",
+  "license": "MIT",
   "type": "library",
   "require": {
     "php": "^7.4",
